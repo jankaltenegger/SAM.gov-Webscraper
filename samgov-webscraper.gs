@@ -39,13 +39,6 @@ function primaryContactEntry(contract, index) {
   }
 }
 
-function searchString(string){
-  var sheet = SpreadsheetApp.getActiveSheet();
-  var search_string = string;
-  var textFinder = sheet.createTextFinder(search_string);
-  return textFinder.findNext();
-}
-
 // Variables for the wanted Spreadsheet and Sheet
 var spreadsheetId = "INSERT SPREADSHEETID HERE";
 var sheetName = "NAME";

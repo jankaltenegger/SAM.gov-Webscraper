@@ -64,8 +64,9 @@ function main(e) {
     // Gets the solicitation number inserted into the left-most column.
     var solNum = sheet.getRange(newRow, 1).getValue();
 
-    //API call with the desired date range 
-    var url = "https://api.sam.gov/prod/opportunities/v2/search?limit=" + searchLimit + "&api_key=TWm9XEEQTCJxPypyTxhUkFGJuwtQDRMVVKpWgMrX&postedFrom=" + yesterday +"&postedTo=" + today + "&solnum=" + solNum;
+    //API call with the desired date range
+    //Add your own API Key within the URL.
+    var url = "https://api.sam.gov/prod/opportunities/v2/search?limit=" + searchLimit + "&api_key=ADDAPIKEYHERE&postedFrom=" + yesterday +"&postedTo=" + today + "&solnum=" + solNum;
     var response = UrlFetchApp.fetch(url);
     var contract = JSON.parse(response.getContentText());
 
